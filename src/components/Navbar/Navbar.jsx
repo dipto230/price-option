@@ -20,7 +20,7 @@ const Navbar = () => {
         <RiMenuFill className="text-2xl" />
       </div>
       
-      <ul className={`md:flex duration-1000 absolute bg-slate-200 px-6 shadow-lg ${open ? "top-16" : "-top-60"} md:block`}>
+      <ul className={`md:flex duration-1000 absolute md:static bg-slate-200 px-6 shadow-lg ${open ? "top-16" : "-top-60"} md:block`}>
         {routes.map(route => (
           <Link key={route.id} route={route} />
         ))}
