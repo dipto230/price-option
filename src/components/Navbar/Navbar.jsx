@@ -14,13 +14,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
+    <nav className="text-black bg-yellow-200 p-6">
       <div onClick={() => setOpen(!open)} className="cursor-pointer md:hidden">
         {open ? "Close" : "Menu"}
         <RiMenuFill className="text-2xl" />
       </div>
       
-      <ul className={`md:flex ${open ? "block" : "hidden"} md:block`}>
+      <ul className={`md:flex duration-1000 absolute bg-slate-200 px-6 shadow-lg ${open ? "top-16" : "-top-60"} md:block`}>
         {routes.map(route => (
           <Link key={route.id} route={route} />
         ))}
